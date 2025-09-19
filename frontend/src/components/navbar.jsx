@@ -12,12 +12,6 @@ export default function Navbar() {
 
         {/* Menu */}
         <div className="hidden md:flex gap-6 items-center">
-          <Link to="/#features" className="text-gray-700 hover:text-purple-600 transition">
-            Funciones
-          </Link>
-          <Link to="/#testimonials" className="text-gray-700 hover:text-purple-600 transition">
-            Testimonios
-          </Link>
           <Link
             to="/login"
             className="px-5 py-2 bg-purple-600 text-white rounded-xl shadow hover:bg-purple-700 transition"

@@ -8,6 +8,10 @@ import Dashboard from "./pages/Dashboard";
 import AdminPanel from "./pages/AdminPanel";
 import StudentDashboard from "./pages/StudentDashboard";
 import TeacherDashboard from "./pages/TeacherDashboard";
+import CoursesPage from "./pages/CoursesPage";   // 👈 Import nuevo
+import ProfilePage from "./pages/ProfilePage";   // 👈 Import nuevo
+import TeacherClasses from "./pages/TeacherClasses"; // 👈 Import nuevo
+import TeacherProfile from "./pages/TeacherProfile"; // 👈 Import nuevo
 
 // Layouts
 import MainLayout from "./layouts/MainLayout";
@@ -15,9 +19,9 @@ import AdminLayout from "./layouts/AdminLayout";
 
 // Navbars para cada rol
 import PublicNavbar from "./components/navbar/PublicNavbar";
-import AdminNavbar from "./components/navbar/AdminNavbar";
 import StudentNavbar from "./components/navbar/StudentNavbar";
 import TeacherNavbar from "./components/navbar/TeacherNavbar";
+import AdminNavbar from "./components/navbar/AdminNavbar";
 
 function App() {
   return (
@@ -44,6 +48,8 @@ function App() {
         }
       >
         <Route path="/student-dashboard" element={<StudentDashboard />} />
+        <Route path="/student/courses" element={<CoursesPage />} />   {/* 👈 nueva ruta */}
+        <Route path="/student/profile" element={<ProfilePage />} />   {/* 👈 nueva ruta */}
       </Route>
 
       {/* Profesor */}
@@ -55,6 +61,8 @@ function App() {
         }
       >
         <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
+        <Route path="/teacher/classes" element={<TeacherClasses />} />   {/* 👈 nueva ruta */}
+        <Route path="/teacher/profile" element={<TeacherProfile />} />   {/* 👈 nueva ruta */}
       </Route>
 
       {/* Admin con su propio layout */}
@@ -75,4 +83,3 @@ function App() {
 }
 
 export default App;
-
